@@ -1,0 +1,146 @@
+{
+  "case_id": "CASE001",
+  "reference": null,
+  "generated_at": "2026-08-16T12:21:26.372204+00:00",
+  "inputs": {
+    "domain": "google.com"
+  },
+  "summary": {
+    "sources_queried": 8,
+    "findings_count": 7,
+    "errors_count": 1
+  },
+  "findings": [
+    {
+      "category": "dns_record",
+      "source": "DNS (A)",
+      "source_url": null,
+      "collection_method": "dns_query",
+      "confidence": "HIGH",
+      "data": {
+        "domain": "google.com",
+        "record_type": "A",
+        "values": [
+          "142.251.221.110"
+        ]
+      },
+      "case_id": "CASE001",
+      "collected_at": "2026-08-16T12:21:20.835660+00:00"
+    },
+    {
+      "category": "dns_record",
+      "source": "DNS (AAAA)",
+      "source_url": null,
+      "collection_method": "dns_query",
+      "confidence": "HIGH",
+      "data": {
+        "domain": "google.com",
+        "record_type": "AAAA",
+        "values": [
+          "2404:6800:4007:836::200e"
+        ]
+      },
+      "case_id": "CASE001",
+      "collected_at": "2026-08-16T12:21:20.867741+00:00"
+    },
+    {
+      "category": "dns_record",
+      "source": "DNS (MX)",
+      "source_url": null,
+      "collection_method": "dns_query",
+      "confidence": "HIGH",
+      "data": {
+        "domain": "google.com",
+        "record_type": "MX",
+        "values": [
+          "10 smtp.google.com"
+        ]
+      },
+      "case_id": "CASE001",
+      "collected_at": "2026-08-16T12:21:20.945361+00:00"
+    },
+    {
+      "category": "dns_record",
+      "source": "DNS (NS)",
+      "source_url": null,
+      "collection_method": "dns_query",
+      "confidence": "HIGH",
+      "data": {
+        "domain": "google.com",
+        "record_type": "NS",
+        "values": [
+          "ns1.google.com",
+          "ns2.google.com",
+          "ns3.google.com",
+          "ns4.google.com"
+        ]
+      },
+      "case_id": "CASE001",
+      "collected_at": "2026-08-16T12:21:20.989948+00:00"
+    },
+    {
+      "category": "dns_record",
+      "source": "DNS (TXT)",
+      "source_url": null,
+      "collection_method": "dns_query",
+      "confidence": "HIGH",
+      "data": {
+        "domain": "google.com",
+        "record_type": "TXT",
+        "values": [
+          "\"MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB\"",
+          "\"Z29vZ2xl\"",
+          "\"apple-domain-verification=30afIBcvSuDV2PLX\"",
+          "\"cisco-ci-domain-verification=47c38bc8c4b74b7233e9053220c1bbe76bcc1cd33c7acf7acd36cd6a5332004b\"",
+          "\"docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e\"",
+          "\"docusign=1b0a6754-49b1-4db5-8540-d2c12664b289\"",
+          "\"facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95\"",
+          "\"globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8=\"",
+          "\"google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0\"",
+          "\"google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ\"",
+          "\"google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o\"",
+          "\"onetrust-domain-verification=0d477fe608074e6f9c12bca7826035cc\"",
+          "\"onetrust-domain-verification=6d685f1d41a94696ad7ef771f68993e0\"",
+          "\"v=spf1 include:_spf.google.com ~all\"",
+          "\"work-accounts-domain-verification=Tcj6JjIMZOw2KsSEw2Nt2rLae89tN6\""
+        ]
+      },
+      "case_id": "CASE001",
+      "collected_at": "2026-08-16T12:21:21.204027+00:00"
+    },
+    {
+      "category": "reverse_dns",
+      "source": "Reverse DNS",
+      "source_url": null,
+      "collection_method": "dns_query",
+      "confidence": "HIGH",
+      "data": {
+        "ip": "142.251.221.110",
+        "ptr": "cgk03s03-in-f14.1e100.net"
+      },
+      "case_id": "CASE001",
+      "collected_at": "2026-08-16T12:21:25.772241+00:00"
+    },
+    {
+      "category": "reverse_dns",
+      "source": "Reverse DNS",
+      "source_url": null,
+      "collection_method": "dns_query",
+      "confidence": "HIGH",
+      "data": {
+        "ip": "2404:6800:4007:836::200e",
+        "ptr": "lcmaaa-az-in-x0e.1e100.net"
+      },
+      "case_id": "CASE001",
+      "collected_at": "2026-08-16T12:21:25.841042+00:00"
+    }
+  ],
+  "errors": [
+    {
+      "source": "rdap",
+      "message": "RDAP lookup returned HTTP 302",
+      "case_id": "CASE001",
+      "occurred_at": "2026-08-16T12:21:26.372021+00:00"
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>OSINT Report — CASE001</title>
+<style>
+body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background: #f6f8fa; color: #1f2328; }
+header { background: #0d1117; color: #fff; padding: 24px 32px; }
+header h1 { margin: 0 0 4px 0; font-size: 22px; }
+header p { margin: 2px 0; color: #c9d1d9; font-size: 13px; }
+.container { max-width: 1000px; margin: 24px auto; padding: 0 16px 48px; }
+.banner { background: #fff8c5; border: 1px solid #d4a72c; padding: 12px 16px; border-radius: 6px; margin-bottom: 24px; font-size: 13px; }
+.card { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; }
+.summary-grid { display: flex; gap: 16px; flex-wrap: wrap; }
+.summary-grid .stat { flex: 1; min-width: 120px; text-align: center; }
+.summary-grid .stat .num { font-size: 28px; font-weight: 700; }
+.summary-grid .stat .label { font-size: 12px; color: #57606a; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eaeef2; vertical-align: top; }
+th { background: #f6f8fa; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 10px; color: #fff; font-size: 11px; font-weight: 600; }
+pre { white-space: pre-wrap; word-break: break-word; font-size: 12px; margin: 0; }
+.error-row td { background: #fff5f5; }
+footer { text-align: center; color: #57606a; font-size: 12px; margin-top: 32px; }
+</style>
+</head>
+<body>
+<header>
+    <h1>Authorized OSINT Investigation Report</h1>
+    <p>Case ID: CASE001</p>
+    <p>Generated: 2026-08-16T12:21:26.374095+00:00</p>
+</header>
+<div class="container">
+    <div class="banner">
+        <strong>Scope &amp; limitations:</strong> This report contains only information that was
+        publicly available or returned by an officially authorized API/credential supplied by the
+        investigator. No authentication, CAPTCHA, rate limit, or other access control was bypassed
+        to produce this report. Username-based correlations are heuristic; a matching username
+        alone is <strong>not</strong> proof that two accounts belong to the same person — see the
+        confidence level on each row.
+    </div>
+
+    <div class="card">
+        <h2>Summary</h2>
+        <div class="summary-grid">
+            <div class="stat"><div class="num">8</div><div class="label">Sources Queried</div></div>
+            <div class="stat"><div class="num">7</div><div class="label">Findings</div></div>
+            <div class="stat"><div class="num">1</div><div class="label">Errors</div></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Investigation Inputs</h2>
+        <table><tr><td>domain</td><td>google.com</td></tr></table>
+    </div>
+
+    <div class="card">
+        <h2>Findings</h2>
+        <table>
+            <thead><tr><th>Category</th><th>Source</th><th>Source URL</th><th>Method</th><th>Confidence</th><th>Collected At</th><th>Data</th></tr></thead>
+            <tbody>
+            <tr>
+                <td>dns_record</td>
+                <td>DNS (A)</td>
+                <td>—</td>
+                <td>dns_query</td>
+                <td><span class="badge" style="background:#1a7f37">HIGH</span></td>
+                <td>2026-08-16T12:21:20.835660+00:00</td>
+                <td><pre>{
+  &quot;domain&quot;: &quot;google.com&quot;,
+  &quot;record_type&quot;: &quot;A&quot;,
+  &quot;values&quot;: [
+    &quot;142.251.221.110&quot;
+  ]
+}</pre></td>
+            </tr>
+            
+            <tr>
+                <td>dns_record</td>
+                <td>DNS (AAAA)</td>
+                <td>—</td>
+                <td>dns_query</td>
+                <td><span class="badge" style="background:#1a7f37">HIGH</span></td>
+                <td>2026-08-16T12:21:20.867741+00:00</td>
+                <td><pre>{
+  &quot;domain&quot;: &quot;google.com&quot;,
+  &quot;record_type&quot;: &quot;AAAA&quot;,
+  &quot;values&quot;: [
+    &quot;2404:6800:4007:836::200e&quot;
+  ]
+}</pre></td>
+            </tr>
+            
+            <tr>
+                <td>dns_record</td>
+                <td>DNS (MX)</td>
+                <td>—</td>
+                <td>dns_query</td>
+                <td><span class="badge" style="background:#1a7f37">HIGH</span></td>
+                <td>2026-08-16T12:21:20.945361+00:00</td>
+                <td><pre>{
+  &quot;domain&quot;: &quot;google.com&quot;,
+  &quot;record_type&quot;: &quot;MX&quot;,
+  &quot;values&quot;: [
+    &quot;10 smtp.google.com&quot;
+  ]
+}</pre></td>
+            </tr>
+            
+            <tr>
+                <td>dns_record</td>
+                <td>DNS (NS)</td>
+                <td>—</td>
+                <td>dns_query</td>
+                <td><span class="badge" style="background:#1a7f37">HIGH</span></td>
+                <td>2026-08-16T12:21:20.989948+00:00</td>
+                <td><pre>{
+  &quot;domain&quot;: &quot;google.com&quot;,
+  &quot;record_type&quot;: &quot;NS&quot;,
+  &quot;values&quot;: [
+    &quot;ns1.google.com&quot;,
+    &quot;ns2.google.com&quot;,
+    &quot;ns3.google.com&quot;,
+    &quot;ns4.google.com&quot;
+  ]
+}</pre></td>
+            </tr>
+            
+            <tr>
+                <td>dns_record</td>
+                <td>DNS (TXT)</td>
+                <td>—</td>
+                <td>dns_query</td>
+                <td><span class="badge" style="background:#1a7f37">HIGH</span></td>
+                <td>2026-08-16T12:21:21.204027+00:00</td>
+                <td><pre>{
+  &quot;domain&quot;: &quot;google.com&quot;,
+  &quot;record_type&quot;: &quot;TXT&quot;,
+  &quot;values&quot;: [
+    &quot;\&quot;MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB\&quot;&quot;,
+    &quot;\&quot;Z29vZ2xl\&quot;&quot;,
+    &quot;\&quot;apple-domain-verification=30afIBcvSuDV2PLX\&quot;&quot;,
+    &quot;\&quot;cisco-ci-domain-verification=47c38bc8c4b74b7233e9053220c1bbe76bcc1cd33c7acf7acd36cd6a5332004b\&quot;&quot;,
+    &quot;\&quot;docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e\&quot;&quot;,
+    &quot;\&quot;docusign=1b0a6754-49b1-4db5-8540-d2c12664b289\&quot;&quot;,
+    &quot;\&quot;facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95\&quot;&quot;,
+    &quot;\&quot;globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8=\&quot;&quot;,
+    &quot;\&quot;google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0\&quot;&quot;,
+    &quot;\&quot;google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ\&quot;&quot;,
+    &quot;\&quot;google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o\&quot;&quot;,
+    &quot;\&quot;onetrust-domain-verification=0d477fe608074e6f9c12bca7826035cc\&quot;&quot;,
+    &quot;\&quot;onetrust-domain-verification=6d685f1d41a94696ad7ef771f68993e0\&quot;&quot;,
+    &quot;\&quot;v=spf1 include:_spf.google.com ~all\&quot;&quot;,
+    &quot;\&quot;work-accounts-domain-verification=Tcj6JjIMZOw2KsSEw2Nt2rLae89tN6\&quot;&quot;
+  ]
+}</pre></td>
+            </tr>
+            
+            <tr>
+                <td>reverse_dns</td>
+                <td>Reverse DNS</td>
+                <td>—</td>
+                <td>dns_query</td>
+                <td><span class="badge" style="background:#1a7f37">HIGH</span></td>
+                <td>2026-08-16T12:21:25.772241+00:00</td>
+                <td><pre>{
+  &quot;ip&quot;: &quot;142.251.221.110&quot;,
+  &quot;ptr&quot;: &quot;cgk03s03-in-f14.1e100.net&quot;
+}</pre></td>
+            </tr>
+            
+            <tr>
+                <td>reverse_dns</td>
+                <td>Reverse DNS</td>
+                <td>—</td>
+                <td>dns_query</td>
+                <td><span class="badge" style="background:#1a7f37">HIGH</span></td>
+                <td>2026-08-16T12:21:25.841042+00:00</td>
+                <td><pre>{
+  &quot;ip&quot;: &quot;2404:6800:4007:836::200e&quot;,
+  &quot;ptr&quot;: &quot;lcmaaa-az-in-x0e.1e100.net&quot;
+}</pre></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>Errors / Skipped Sources</h2>
+        <table>
+            <thead><tr><th>Source</th><th>Message</th><th>Occurred At</th></tr></thead>
+            <tbody>
+            <tr class="error-row">
+                <td>rdap</td>
+                <td>RDAP lookup returned HTTP 302</td>
+                <td>2026-08-16T12:21:26.372021+00:00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>Methodology</h2>
+        <p>Data was collected exclusively from public sources and officially authorized APIs
+        (using investigator-supplied credentials where required). DNS/WHOIS lookups used standard
+        resolution protocols. No private, login-walled, or access-controlled content was accessed.
+        Any source requiring a credential that was not configured is listed as "skipped" above
+        rather than omitted silently.</p>
+    </div>
+</div>
+<footer>Authorized OSINT Tool &middot; For lawful investigative use only</footer>
+</body>
+</html>
